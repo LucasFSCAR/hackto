@@ -4,15 +4,12 @@ public class Questao1
 {
 
 	//encontrar o numero de divisores
-	public static int divisores(int n)
-	{
+	public static int divisores(int n){
 		//definir dados
 		int div = 0;
 
-		for(int j=1; j<=n; j++)
-		{
-			if(n%j == 0)
-			{
+		for(int j=1; j<=n; j++){
+			if(n%j == 0){
 				div++;
 			}//fim se
 		}//fim para
@@ -22,33 +19,27 @@ public class Questao1
 	}//fim divisores
 
 	
-	public static int divisores2(int n, int p)
-	{
+	public static int divisores2 (int n, int p){
 		//definir dados
 		  int cont = 0;
 	  	  int x,j,k,m=0;
 		  int resto;
 
-		for(int i = 1; i<=n; i++)
-		{
-			if(n%i == 0)
-			{
+		for(int i = 1; i<=n; i++){
+			if(n%i == 0){
 				System.out.println("div"+i);
 
-				for(j=2; j<=p; j++)
-				{
+				for(j=2; j<=p; j++){
 					k = divisores(j);
 					
-					if(k == 2)
-					{
+					if(k == 2){
 //					System.out.println("j"+j);
 						m = i/j;
 //						resto = i % j;
 //						System.out.println("j"+j);
 						System.out.println("m"+m);
 				
-						while(m%j != 1 || m%j!=0)
-						{
+						while(m%j != 1 || m%j!=0){
 							m = m/j;
 //							resto = m % j;
 						}
@@ -63,8 +54,7 @@ public class Questao1
 	}
 
 
-	public static void main (String [] args)
-	{
+	public static void main (String [] args){
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		int p;
@@ -73,7 +63,6 @@ public class Questao1
 		System.out.println(divisores2(n,p));
 //		n = n * p;
 //		System.out.println(n);
-		
 
 	}//fim metodo principal
 }//fim classe
